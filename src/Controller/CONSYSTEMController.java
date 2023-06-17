@@ -37,10 +37,7 @@ public class CONSYSTEMController implements Initializable {
     }
 
 
-    private void resetButtonHandler(ActionEvent event) {
-        nisTextfield.setText("");
-        usdTextfield.setText("");
-    }
+  
 
     @FXML
     private void logoutBTNHandler(ActionEvent event) throws IOException {
@@ -54,9 +51,9 @@ public class CONSYSTEMController implements Initializable {
     private void convertBTNHandler(ActionEvent event) {
     
       if (nisTextfield.getText().isEmpty() && !usdTextfield.getText().isEmpty()) {
-            nisTextfield.setText(String.valueOf(Double.parseDouble(usdTextfield.getText()) * 3.5));
+            nisTextfield.setText(String.valueOf(Double.parseDouble(usdTextfield.getText()) * 3.6));
         } else if (!nisTextfield.getText().isEmpty() && usdTextfield.getText().isEmpty()) {
-            usdTextfield.setText(String.valueOf(Double.parseDouble(nisTextfield.getText()) / 3.5));
+            usdTextfield.setText(String.valueOf(Double.parseDouble(nisTextfield.getText()) / 3.6));
 
         }
 
